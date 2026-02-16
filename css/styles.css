@@ -95,8 +95,8 @@ ul {
     list-style: none;
 }
 
-.nav-list-item {
-    display: inline-flex;
+.nav-item {
+    display: block;
     text-decoration: none;
     color: inherit;
     font-weight: 500;
@@ -107,9 +107,22 @@ ul {
     padding: 24px 0;
 }
 
-.nav-list-item:hover,
-.nav-list-item:focus {
+
+.nav-item:hover,
+.nav-item:focus {
     color: #404bbf;
+}
+
+.active-link::after {
+    content: " ";
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    position: relative;
+    top: 25px;
+    bottom: 0;
+    background-color: #404bbf;
 }
 
 .address-list-item {
@@ -130,7 +143,10 @@ ul {
 }
 
 .main-section {
-    background-color: #2e2f42;
+    background-image: linear-gradient(to top, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero-bg.png");
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 188px;
     padding-bottom: 188px;
 }
@@ -210,8 +226,26 @@ ul {
     margin-left: auto;
 } 
 
+
 .features-list-item {
     width: 264px;
+}
+
+.features-list-box {
+    margin-bottom: 8px;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    background-color: #f4f4fd;
+    border: 1px solid #8e8f99;
+}
+
+.features-icon {
+    position: relative;
+    top: 24px;
+    right: 100px;
+    bottom: 24px;
+    left: 100px;
 }
 
 .features-list-header {
